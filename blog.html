@@ -138,67 +138,6 @@
       <img src="images/ireland.jpg" alt="Ireland Scenery">
     </section>
 </div>
-
-<script>
-const images = document.querySelectorAll(".gallery img");
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightbox-img");
-
-let currentIndex = 0;
-
-// Function to open lightbox
-function openLightbox(src, index) {
-    lightbox.style.display = "flex";
-    lightboxImg.src = src;
-    currentIndex = index;
-}
-
-// Function to close lightbox
-function closeLightbox() {
-    lightbox.style.display = "none";
-}
-
-// Function to navigate images
-function navigateLightbox(direction) {
-    currentIndex += direction;
-    if (currentIndex < 0) {
-        currentIndex = images.length - 1; // Loop back to last image
-    } else if (currentIndex >= images.length) {
-        currentIndex = 0; // Loop back to first image
-    }
-    lightboxImg.src = images[currentIndex].src;
-}
-
-// Attach event listeners to all gallery images
-images.forEach((img, index) => {
-    img.addEventListener("click", () => openLightbox(img.src, index));
-});
-
-// Listen for key presses (Arrow Left & Right)
-document.addEventListener("keydown", (event) => {
-    if (lightbox.style.display === "flex") {
-        if (event.key === "ArrowRight") {
-            navigateLightbox(1);
-        } else if (event.key === "ArrowLeft") {
-            navigateLightbox(-1);
-        } else if (event.key === "Escape") {
-            closeLightbox();
-        }
-    }
-});
-
-// Prevent context menu and drag start on images
-document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-});
-document.addEventListener('dragstart', function(e) {
-    if (e.target.tagName === 'IMG') {
-        e.preventDefault();
-    }
-});
-
-</script>
-
 <footer>
   <div class="social-links">
     <a href="https://www.flickr.com/photos/mmarquez/" target="_blank">
@@ -207,7 +146,15 @@ document.addEventListener('dragstart', function(e) {
   </div>
   <p>Learning web development one trip at a time | &copy; 2024 Mark Marquez</p>
 </footer>    
+<script>
+  function openLightbox(imageSrc) {
+    document.getElementById('lightbox').style.display = 'flex';
+    document.getElementById('lightbox-img').src = imageSrc;
+  }
 
-
+  function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+  }
+</script>
 </body>
 </html>

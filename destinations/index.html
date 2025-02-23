@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A personal blog documenting life milestones and travel experiences.">
+    <title>Destinations | From Milestones to Map Points</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo"><a href="/index.html">From Milestones to Map Points: A Tale of Life Events and Travel Accomplishments</a></div>
+        <ul class="nav-links">
+          <li><a href="/destinations/index.html">Destinations</a></li> <span>|</span>
+          <li><a href="/about-me.html">About Me</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <section class="destinations page-germany">
+        <div class="destination">
+          <p>Germany – Our recent journey to Germany was filled with excitement and adventure. After landing in Munich, we picked up our rental car and began our 18-day itinerary, packed with history, culture, and great memories. Germany delivers when it comes to scenic beauty and diverse historical cities. Learn more about our travel itinerary in the destination section, and hopefully, you'll find something to help you plan your next German adventure!</p> 
+          <a href="/destinations/germany.html">Read More</a>
+          <figure class="center-text">
+            <img src="/images/nuremberg-city-lookout.jpg" alt="View from a lookout point in Nuremberg, Germany">
+            <figcaption class="small-italic">Nuremberg, Germany</figcaption>
+          </figure>
+        </div>
+      </section> 
+
+      <section class="destinations page-italy-mediterranean">
+        <div class="destination">
+          <p>Italy – Rome and The Mediterranean – A trip filled with great food, wine, and amazing sites. This vacation was filled with some great memories. More coming soon.....</p> 
+          <a href="/destinations/italy.html">Read More</a>
+          <figure class="center-text">
+            <img src="/images/Colosseum-inside-rome.jpg" alt="Inside view of the Colosseum in Rome, Italy">
+            <figcaption class="small-italic">The Colosseum, Rome, Italy</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="destinations page-ireland">
+        <div class="destination">
+          <p>Ireland – Explore the Emerald Isle with us as we journey through its rolling green hills, historic castles, and vibrant cities. From Dublin's rich cultural heritage to the stunning Cliffs of Moher, discover the magic of Ireland through our experiences.</p> 
+          <a href="/destinations/ireland.html">Read More</a>
+          <figure class="center-text">
+            <img src="/images/ireland-placeholder.jpg" alt="Scenic view of Irish countryside">
+            <figcaption class="small-italic">County Kerry, Ireland</figcaption>
+          </figure>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <div class="social-links">
+        <a href="https://www.flickr.com/photos/mmarquez/" target="_blank">
+          <img src="/images/flickr-seeklogo.png" alt="Follow [Mark Marquez] on Flickr" width="32" height="32">
+        </a>
+      </div>
+      <p>Learning web development one trip at a time | &copy; 2024 Mark Marquez</p>
+    </footer>    
+
+    <script>
+      document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+      });
+      document.addEventListener('dragstart', function(e) {
+        if (e.target.tagName === 'IMG') {
+          e.preventDefault();
+        }
+      });
+    </script>
+  </body>
+</html>
